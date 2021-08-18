@@ -9,28 +9,49 @@
 html,
 body {
   font-family: "Montserrat", sans-serif;
-  font-weight: 700;
+  min-height: 100vh;
+  @apply text-black dark:text-gray-50 dark:bg-gray-800 bg-gray-100 bg-cover;
 }
 
-a {
-  text-decoration: none;
-  color: #000;
+@layer base {
+  h1 {
+    @apply text-6xl text-center;
+  }
+
+  h2 {
+    @apply text-4xl text-center;
+  }
+
+  a {
+    @apply no-underline text-black dark:text-gray-50;
+  }
 }
 
-h1 {
-  font-size: 4rem;
-  font-family: "Inconsolata";
-  font-weight: 800;
-}
+@layer utilities {
+  .burguer,
+  .burguer::after,
+  .burguer::before,
+  .cross,
+  .cross::after {
+    @apply w-full rounded-md h-1 absolute bg-black dark:bg-gray-50;
+  }
 
-h2 {
-  font-size: 2rem;
-  font-family: "Lato";
-  margin-top: 1rem;
-}
+  .burguer::after {
+    content: "";
+    transform: translateY(10px);
+  }
 
-h1,
-h2,
-h3 {
-  text-align: center;
+  .burguer::before {
+    content: "";
+    transform: translateY(-10px);
+  }
+
+  .cross {
+    transform: rotate(45deg);
+  }
+
+  .cross::after {
+    content: "";
+    transform: rotate(-90deg);
+  }
 }
