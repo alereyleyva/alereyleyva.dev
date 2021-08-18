@@ -3,17 +3,13 @@ module.exports = {
   darkMode: "class", // or 'media' or 'class'
   theme: {
     screens: {
-      sm: { max: "375px" },
-      // => @media (max-width: 375px) { ... }
+      sm: { max: "475px" },
 
-      md: { max: "640px" },
-      // => @media (max-width: 640px) { ... }
+      md: { max: "750px" },
 
       lg: { max: "1100px" },
-      // => @media (max-width: 1100px) { ... }
 
       xl: { max: "1400px" },
-      // => @media (max-width: 1400px) { ... }
     },
   },
   variants: {
