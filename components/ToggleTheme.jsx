@@ -1,20 +1,21 @@
-import React from "react";
-import useThemeStatus from "../theme/useThemeStatus.js";
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
+import useThemeStatus from '../theme/useThemeStatus';
 
 export default function ToggleTheme() {
-  const { theme, setTheme } = useThemeStatus();
+  const { dark, toggleTheme } = useThemeStatus();
 
   return (
     <>
       <button
         className="relative w-12 h-12 sm:w-10 sm:h-10"
-        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+        onClick={toggleTheme}
+        type="button"
       >
-        {theme === "light" ? (
-          <Image src={"/sun.svg"} layout="fill" alt="sun svg" />
+        {dark ? (
+          <Image src="/moon.svg" layout="fill" alt="dark mode" />
         ) : (
-          <Image src={"/moon.svg"} layout="fill" alt="moon svg" />
+          <Image src="/sun.svg" layout="fill" alt="light mode" />
         )}
       </button>
     </>

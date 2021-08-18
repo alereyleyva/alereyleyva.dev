@@ -1,14 +1,14 @@
-import React, { useEffect, useState } from "react";
-import SocialLogo from "./SocialLogo";
-import useThemeStatus from "../theme/useThemeStatus";
+import React, { useEffect, useState } from 'react';
+import SocialLogo from './SocialLogo';
+import useThemeStatus from '../theme/useThemeStatus';
 
 export default function RRSS() {
-  const { theme, setTheme } = useThemeStatus();
-  const [gitHubSRC, setGitHubSRC] = useState("githubLight.svg");
+  const { dark } = useThemeStatus();
+  const [gitHubSRC, setGitHubSRC] = useState('githubLight.svg');
 
   useEffect(() => {
-    setGitHubSRC(theme === "dark" ? "githubDark.svg" : "githubLight.svg");
-  }, [theme]);
+    setGitHubSRC(dark ? 'githubDark.svg' : 'githubLight.svg');
+  }, [dark]);
 
   return (
     <div className="flex">
