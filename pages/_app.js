@@ -1,9 +1,10 @@
-import "tailwindcss/tailwind.css";
-import "../styles/tailwind.css";
-import "../styles/globals.css";
-import Head from "next/head";
-import Header from "../components/Header";
-import ThemeStatusProvider from "../theme/ThemeStatusProvider";
+import React from 'react';
+import 'tailwindcss/tailwind.css';
+import '../styles/tailwind.css';
+import '../styles/globals.css';
+import Head from 'next/head';
+import Header from '../components/Header';
+import ThemeStatusProvider from '../theme/ThemeStatusProvider';
 
 function MyApp({ Component, pageProps }) {
   return (

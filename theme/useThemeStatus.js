@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import { themeStatusContext } from "./ThemeStatusProvider";
+import { useContext } from 'react';
+import { themeStatusContext } from './ThemeStatusProvider';
 
 const useThemeStatus = () => useContext(themeStatusContext);
 

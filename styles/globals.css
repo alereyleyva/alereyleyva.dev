@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Inconsolata:wght@700;800&family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700;800&family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
 
 * {
   margin: 0;
@@ -8,18 +8,18 @@
 
 html,
 body {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
   @apply text-black dark:text-gray-50 dark:bg-gray-800 bg-gray-100 bg-cover;
 }
 
 @layer base {
   h1 {
-    @apply text-6xl text-center;
+    @apply text-6xl text-center mb-5;
   }
 
   h2 {
-    @apply text-4xl text-center;
+    @apply text-4xl text-center mb-5;
   }
 
   a {
@@ -33,16 +33,17 @@ body {
   .burguer::before,
   .cross,
   .cross::after {
-    @apply w-full rounded-md h-1 absolute bg-black dark:bg-gray-50;
+    width: 100%;
+    @apply rounded-md h-1 absolute bg-black dark:bg-gray-50;
   }
 
   .burguer::after {
-    content: "";
+    content: '';
     transform: translateY(10px);
   }
 
   .burguer::before {
-    content: "";
+    content: '';
     transform: translateY(-10px);
   }
 
@@ -51,7 +52,7 @@ body {
   }
 
   .cross::after {
-    content: "";
+    content: '';
     transform: rotate(-90deg);
   }
 }

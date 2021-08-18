@@ -1,4 +1,4 @@
-import RRSS from "../components/RRSS";
+import React from 'react';
 
 export default function Home() {
   return (
