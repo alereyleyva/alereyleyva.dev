@@ -4,17 +4,19 @@ import Image from "next/image";
 
 export default function ToggleTheme() {
   const { theme, setTheme } = useThemeStatus();
+
   return (
     <>
-      {theme === "light" ? (
-        <button onClick={() => setTheme("dark")}>
-          <Image src={"/sun.svg"} width="50" height="50" alt="sun svg" />
-        </button>
-      ) : (
-        <button onClick={() => setTheme("light")}>
-          <Image src={"/moon.svg"} width="50" height="50" alt="moon svg" />
-        </button>
-      )}
+      <button
+        className="relative w-12 h-12 sm:w-10 sm:h-10"
+        onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+      >
+        {theme === "light" ? (
+          <Image src={"/sun.svg"} layout="fill" alt="sun svg" />
+        ) : (
+          <Image src={"/moon.svg"} layout="fill" alt="moon svg" />
+        )}
+      </button>
     </>
   );
 }

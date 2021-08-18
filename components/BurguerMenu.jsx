@@ -5,7 +5,7 @@ export default function BurguerMenu() {
 
   return (
     <div
-      className="w-8 mr-4 relative hidden lg:flex justify-center items-end cursor-pointer"
+      className="w-8 mr-5 relative hidden lg:flex justify-center items-end cursor-pointer"
       onClick={() => setShowMenu(!showMenu)}
     >
       <div className={showMenu ? "cross" : "burguer"}></div>
