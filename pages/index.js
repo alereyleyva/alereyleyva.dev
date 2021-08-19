@@ -11,7 +11,6 @@ export default function Home() {
         </div>
         <div className="relative w-96 h-96 sm:w-72 sm:h-72 md:h-80 md:w-80">
           <Image
-            priority
             src="/alereyleyva.jpg"
             alt="alereyleyva photo"
             layout="fill"
