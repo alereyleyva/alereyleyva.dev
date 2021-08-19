@@ -1,22 +1,23 @@
 import React from 'react';
 import RRSS from './RRSS';
 import ToggleTheme from './ToggleTheme';
+import routes from '../data/routes';
 import NavLink from './NavLink';
-import BurguerMenu from './BurguerMenu';
+import Burguer from './Burguer';
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center h-36">
+    <header className="flex justify-between items-center h-36 md:h-32 sm:h-28">
       <div className="flex items-center">
-        <BurguerMenu />
+        <Burguer />
         <ToggleTheme />
       </div>
       <div className="flex lg:hidden">
-        <NavLink href="/">Home</NavLink>
-        <NavLink href="/projects">Projects</NavLink>
-        <NavLink href="/skills">Skills</NavLink>
-        <NavLink href="/about">About Me</NavLink>
+        {routes.map(({ href, content }) => (
+          <NavLink href={href}>{content}</NavLink>
+        ))}
       </div>
+
       <RRSS />
     </header>
   );
