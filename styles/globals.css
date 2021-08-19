@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inconsolata:wght@700;800&family=Lato:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
 
 * {
   margin: 0;
@@ -10,31 +10,35 @@ html,
 body {
   font-family: 'Montserrat', sans-serif;
   min-height: 100vh;
-  @apply text-black dark:text-gray-50 dark:bg-gray-800 bg-gray-100 bg-cover;
+  @apply text-black dark:text-gray-50 dark:bg-gray-800 bg-gray-100;
 }
 
 @layer base {
   h1 {
-    @apply text-6xl text-center mb-5;
+    @apply text-6xl text-center mb-5 font-medium;
   }
 
   h2 {
-    @apply text-4xl text-center mb-5;
+    @apply text-4xl text-center mb-3;
   }
 
   a {
-    @apply no-underline text-black dark:text-gray-50;
+    @apply no-underline;
+    text-underline-offset: 8px;
   }
 }
 
 @layer utilities {
   .burguer,
   .burguer::after,
-  .burguer::before,
+  .burguer::before {
+    @apply w-10 sm:w-8 h-1 rounded-md absolute bg-black dark:bg-gray-50;
+  }
+
   .cross,
   .cross::after {
-    width: 100%;
-    @apply rounded-md h-1 absolute bg-black dark:bg-gray-50;
+    width: 2.6rem;
+    @apply w-11 rounded-md h-1 absolute bg-black dark:bg-white;
   }
 
   .burguer::after {
@@ -54,5 +58,27 @@ body {
   .cross::after {
     content: '';
     transform: rotate(-90deg);
+  }
+
+  .svg-icon {
+    @apply fill-current text-black dark:text-gray-50;
+  }
+
+  .svg-github {
+    @apply w-16 h-16;
+  }
+
+  @media (max-width: 475px) {
+    .svg-github {
+      width: 4rem;
+      height: 3.25rem;
+    }
+  }
+
+  .mobile-nav {
+    @apply hidden lg:flex flex-col justify-center items-center;
+    @apply absolute h-screen z-10 w-full;
+    @apply bg-gray-50 text-black dark:text-white dark:bg-gray-800;
+    opacity: 0.96;
   }
 }
