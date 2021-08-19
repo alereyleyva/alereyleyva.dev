@@ -13,6 +13,16 @@ body {
   @apply text-black dark:text-gray-50 dark:bg-gray-800 bg-gray-100;
 }
 
+.svg-github {
+  fill: currentColor;
+}
+
+@media (max-width: 475px) {
+  .svg-github {
+    height: 38px;
+  }
+}
+
 @layer base {
   h1 {
     @apply text-6xl text-center mb-5 font-medium;
@@ -58,17 +68,6 @@ body {
   .cross::after {
     content: '';
     transform: rotate(-90deg);
-  }
-
-  .svg-icon {
-    @apply fill-current text-black dark:text-gray-50;
-  }
-
-  @media (max-width: 475px) {
-    .svg-github {
-      width: 4rem;
-      height: 3.25rem;
-    }
   }
 
   .mobile-nav {

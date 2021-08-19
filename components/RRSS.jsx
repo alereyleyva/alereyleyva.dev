@@ -1,5 +1,5 @@
 import React from 'react';
-import GitHubSVG from '../icons/GitHubSVG';
+import GitHubSVG from '../SVG/GitHubSVG';
 import SocialLogo from './SocialLogo';
 
 export default function RRSS() {
@@ -8,6 +8,7 @@ export default function RRSS() {
       <SocialLogo alt="GitHub" href="https://github.com/AleReyLeyva">
         <GitHubSVG />
       </SocialLogo>
+
       <SocialLogo
         src="/linkedin.svg"
         alt="Linkedin"
