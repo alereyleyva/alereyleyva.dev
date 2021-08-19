@@ -11,7 +11,7 @@ export default function NavLink({ href, children, dark, onClick }) {
   return (
     <Link href={href}>
       <a
-        className={`px-5 py-3 font-regular lg:my-5 text-center text-black text-3xl lg:text-6xl ${text} ${underline} lg:no-underline`}
+        className={`px-5 py-3 font-regular lg:my-5 text-center text-black text-3xl lg:text-5xl ${text} ${underline} lg:no-underline`}
         onClick={onClick}
       >
         {children}
