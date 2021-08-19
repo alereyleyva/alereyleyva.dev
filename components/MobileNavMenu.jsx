@@ -9,7 +9,7 @@ function MobileNavMenu({ onClose }) {
     <div className="mobile-nav">
       <Cross onClick={onClose} />
       {routes.map(({ href, content }) => (
-        <NavLink onClick={onClose} href={href}>
+        <NavLink key={href} onClick={onClose} href={href}>
           {content}
         </NavLink>
       ))}

@@ -14,7 +14,9 @@ export default function Header() {
       </div>
       <div className="flex lg:hidden">
         {routes.map(({ href, content }) => (
-          <NavLink href={href}>{content}</NavLink>
+          <NavLink key={href} href={href}>
+            {content}
+          </NavLink>
         ))}
       </div>
 
