@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <>
       <div className="flex lg:flex-col items-center justify-evenly lg:justify-between">
-        <div className="w-2/5 lg:w-full lg:mb-16">
+        <div className="w-2/5 lg:w-full lg:mb-12">
           <h1 className="sm:text-5xl">Alejandro Rey Leyva</h1>
           <h2>Junior Full-Stack Developer</h2>
         </div>
