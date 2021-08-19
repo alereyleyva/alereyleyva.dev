@@ -60,6 +60,17 @@ body {
     transform: rotate(-90deg);
   }
 
+  .svg-icon {
+    @apply fill-current text-black dark:text-gray-50;
+  }
+
+  @media (max-width: 475px) {
+    .svg-github {
+      width: 4rem;
+      height: 3.25rem;
+    }
+  }
+
   .mobile-nav {
     @apply hidden lg:flex flex-col justify-center items-center bg-gray-50 text-black dark:text-white dark:bg-gray-800 absolute h-screen z-10 w-full;
     opacity: 0.98;
