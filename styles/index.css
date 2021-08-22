@@ -29,6 +29,14 @@ a {
   text-underline-offset: 8px;
 }
 
+.btn {
+  @apply mx-5 py-3 px-4 rounded-md border-2 
+  bg-blue-500 text-white border-blue-500
+  hover:bg-gray-50 hover:text-black
+  font-medium text-xl text-center cursor-pointer;
+  transition: all 0.4s ease;
+}
+
 .app-container {
   @apply w-3/4 md:w-5/6 mx-auto;
 }
@@ -98,7 +106,7 @@ a {
 }
 
 .svg {
-  @apply fill-current;
+  @apply fill-current w-full;
 }
 
 .svg-github {
@@ -106,9 +114,13 @@ a {
 }
 
 .svg-express {
-  @apply w-full h-24;
+  @apply h-24;
 }
 
 .svg-next {
-  @apply w-full h-32;
+  @apply h-32;
+}
+
+.svg-next {
+  @apply h-32;
 }
