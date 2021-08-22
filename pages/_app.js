@@ -9,7 +9,7 @@ import ThemeStatusProvider from '../theme/ThemeStatusProvider';
 function MyApp({ Component, pageProps }) {
   return (
     <ThemeStatusProvider>
-      <div className="w-3/4 md:w-5/6 mx-auto min-h-screen">
+      <div className="app-container min-h-screen">
         <Head>
           <title>Ale Rey Leyva | Personal Portfolio</title>
           <meta

@@ -6,13 +6,19 @@ import NavLink from './NavLink';
 
 function MobileNavMenu({ onClose }) {
   return (
-    <div className="mobile-nav">
-      <Cross onClick={onClose} />
-      {routes.map(({ href, content }) => (
-        <NavLink key={href} onClick={onClose} href={href}>
-          {content}
-        </NavLink>
-      ))}
+    <div className="modal-container">
+      <div className="app-container">
+        <div className="header-container">
+          <Cross onClick={onClose} />
+        </div>
+        <div className=" h-full flex flex-col justify-center items-center">
+          {routes.map(({ href, content }) => (
+            <NavLink key={href} onClick={onClose} href={href}>
+              {content}
+            </NavLink>
+          ))}
+        </div>
+      </div>
     </div>
   );
 }

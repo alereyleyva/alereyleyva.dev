@@ -9,69 +9,106 @@
 html,
 body {
   font-family: 'Montserrat', sans-serif;
-  min-height: 100vh;
   @apply text-black dark:text-gray-50 dark:bg-gray-800 bg-gray-100;
 }
 
+h1 {
+  @apply text-6xl text-center mb-5 font-medium;
+}
+
+h2 {
+  @apply text-4xl text-center mb-3;
+}
+
+h3 {
+  @apply text-xl font-semibold;
+}
+
+a {
+  @apply no-underline;
+  text-underline-offset: 8px;
+}
+
+.app-container {
+  @apply w-3/4 md:w-5/6 mx-auto;
+}
+
+.header-container {
+  @apply flex justify-between items-center h-36 md:h-32 sm:h-28;
+}
+
+.modal-container {
+  @apply hidden lg:flex flex-col fixed left-0 top-0 h-screen z-20 w-full;
+  @apply bg-gray-50 text-black dark:text-white dark:bg-gray-800;
+  opacity: 0.99;
+}
+
+.burguer,
+.burguer::after,
+.burguer::before {
+  @apply w-10 sm:w-8 h-1 rounded-md absolute bg-black dark:bg-gray-50;
+}
+
+.cross,
+.cross::after {
+  width: 2.6rem;
+  @apply w-11 rounded-md h-1 absolute bg-black dark:bg-white;
+}
+
+.burguer::after {
+  content: '';
+  transform: translateY(10px);
+}
+
+.burguer::before {
+  content: '';
+  transform: translateY(-10px);
+}
+
+.cross {
+  transform: rotate(45deg);
+}
+
+.cross::after {
+  content: '';
+  transform: rotate(-90deg);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(7rem, 1fr));
+}
+
+@media (min-width: 475px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr));
+  }
+}
+
+@media (min-width: 900px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr));
+  }
+}
+
+@media (min-width: 1100px) {
+  .skills-grid {
+    grid-template-columns: repeat(auto-fill, minmax(12rem, 1fr));
+  }
+}
+
+.svg {
+  @apply fill-current;
+}
+
 .svg-github {
-  fill: currentColor;
+  @apply sm:h-10;
 }
 
-@media (max-width: 475px) {
-  .svg-github {
-    height: 38px;
-  }
+.svg-express {
+  @apply w-full h-24;
 }
 
-@layer base {
-  h1 {
-    @apply text-6xl text-center mb-5 font-medium;
-  }
-
-  h2 {
-    @apply text-4xl text-center mb-3;
-  }
-
-  a {
-    @apply no-underline;
-    text-underline-offset: 8px;
-  }
-}
-
-@layer utilities {
-  .burguer,
-  .burguer::after,
-  .burguer::before {
-    @apply w-10 sm:w-8 h-1 rounded-md absolute bg-black dark:bg-gray-50;
-  }
-
-  .cross,
-  .cross::after {
-    width: 2.6rem;
-    @apply w-11 rounded-md h-1 absolute bg-black dark:bg-white;
-  }
-
-  .burguer::after {
-    content: '';
-    transform: translateY(10px);
-  }
-
-  .burguer::before {
-    content: '';
-    transform: translateY(-10px);
-  }
-
-  .cross {
-    transform: rotate(45deg);
-  }
-
-  .cross::after {
-    content: '';
-    transform: rotate(-90deg);
-  }
-
-  .mobile-nav {
-    @apply hidden lg:flex flex-col justify-center items-center bg-gray-50 text-black dark:text-white dark:bg-gray-800 absolute h-screen z-10 w-full;
-    opacity: 0.98;
-  }
+.svg-next {
+  @apply w-full h-32;
 }

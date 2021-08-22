@@ -7,7 +7,7 @@ import Burguer from './Burguer';
 
 export default function Header() {
   return (
-    <header className="flex justify-between items-center h-36 md:h-32 sm:h-28">
+    <header className="header-container">
       <div className="flex items-center">
         <Burguer />
         <ToggleTheme />
