@@ -17,6 +17,18 @@ const projects = [
     code: 'https://github.com/alereyleyva/weather-app',
     techs: 'React Next TailwindCSS',
   },
+  {
+    name: 'Basic Deno Rest Api 🦕',
+    web: '',
+    code: 'https://github.com/alereyleyva/deno-rest-api',
+    techs: 'Deno Oak MySQL TypeScript',
+  },
+  {
+    name: 'Expenses Manager 💸',
+    web: 'https://unipiso.herokuapp.com/',
+    code: 'https://github.com/alereyleyva/unipiso',
+    techs: 'MERN-Stack Redux',
+  },
 ];
 
 export default projects;

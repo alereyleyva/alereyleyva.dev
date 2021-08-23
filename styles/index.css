@@ -38,7 +38,7 @@ a {
 }
 
 .btn > svg {
-  @apply mr-2;
+  @apply mr-3;
 }
 
 .app-container {

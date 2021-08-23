@@ -1,6 +1,7 @@
 import React from 'react';
 import Button from './Button';
 import CodeSVG from '../SVG/CodeSVG';
+import WebSVG from '../SVG/WebSVG';
 
 export default function ProjectCard({ name, web, code, techs }) {
   const styles = `
@@ -23,7 +24,10 @@ export default function ProjectCard({ name, web, code, techs }) {
           <CodeSVG />
           Code
         </Button>
-        <Button href={web}>🔗 Web</Button>
+        <Button href={web}>
+          <WebSVG />
+          Web
+        </Button>
       </div>
     </div>
   );
