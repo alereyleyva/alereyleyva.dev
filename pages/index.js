@@ -2,6 +2,8 @@ import React from 'react';
 import Image from 'next/image';
 import Button from '../components/Button';
 import socialLinks from '../data/socialLinks';
+import EmailSVG from '../SVG/EmailSVG';
+import DownloadSVG from '../SVG/DownloadSVG';
 
 export default function Home() {
   return (
@@ -20,9 +22,15 @@ export default function Home() {
           />
         </div>
       </div>
-      <div className="w-full flex justify-center items-center md:mt-10 mt-16">
-        <Button href={socialLinks.CV}>View CV</Button>
-        <Button href={socialLinks.email}>Email me</Button>
+      <div className="w-full flex sm:flex-col justify-center items-center lg:pt-10 pt-20 pb-12">
+        <Button href={socialLinks.CV}>
+          <DownloadSVG />
+          CV
+        </Button>
+        <Button href={socialLinks.email}>
+          <EmailSVG />
+          Email
+        </Button>
       </div>
       <p className="absolute top-1 left-0 text-center w-full font-medium">
         Work in progress...
