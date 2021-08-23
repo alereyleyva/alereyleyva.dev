@@ -7,7 +7,7 @@ export default function Burguer() {
   return (
     <>
       <div
-        className="w-12 h-12 mr-4 relative hidden lg:flex justify-center items-center cursor-pointer"
+        className="w-12 h-12 mr-3 relative hidden lg:flex justify-center items-center cursor-pointer"
         onClick={() => setShowMenu(!showMenu)}
       >
         <div className="burguer" />

@@ -12,11 +12,7 @@ export default function ToggleTheme() {
         onClick={toggleTheme}
         type="button"
       >
-        {dark ? (
-          <Image src="/moon.svg" layout="fill" alt="dark mode" />
-        ) : (
-          <Image src="/sun.svg" layout="fill" alt="light mode" />
-        )}
+        <p className="lg:text-4xl text-5xl">{dark ? '🌙' : '🌞'}</p>
       </button>
     </>
   );
