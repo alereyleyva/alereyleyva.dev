@@ -4,7 +4,7 @@ import CodeSVG from '../SVG/CodeSVG';
 
 export default function ProjectCard({ name, web, code, techs }) {
   const styles = `
-    h-96 lg:h-80 sm:w-full  border-2 border-gray-100
+    h-96 lg:h-80 sm:w-full border-2 border-black dark:border-gray-100
     flex flex-col items-center justify-around
     p-6 rounded-lg 
     text-gray-800 dark:text-white font-medium
