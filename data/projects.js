@@ -35,6 +35,12 @@ const projects = [
     web: 'https://interior-consultant-app.vercel.app/',
     code: 'https://github.com/AleReyLeyva/Interior-Consultant',
   },
+  {
+    name: 'URL Shortener 🔗',
+    techs: 'NextJS PrismaJS MongoDB',
+    web: 'https://shortking.vercel.app/',
+    code: 'https://github.com/AleReyLeyva/url-shortener',
+  },
 ];
 
 export default projects;
